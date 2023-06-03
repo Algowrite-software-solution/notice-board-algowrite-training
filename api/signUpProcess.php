@@ -32,9 +32,12 @@ foreach ($errors as $key => $value) {
     }
 }
 
-$rs="SELECT * FROM `users` WHERE `email`= ?";
-$prepared2 = $database->prepare($rs,'s',array($email));
-$data = $prepared2->get_result();
+require('../app/dbQuery.php');
+$database = new DB();
+
+$rs1="SELECT * FROM `users` WHERE `email`= ?";
+$prepared1 = $database->prepare($rs1,'s',array($email));
+$data = $prepared1->get_result();
 
 if($data->num_rows != 0){
     $response_object->error="user alredy exits with same email";
@@ -64,10 +67,10 @@ $currentDateTime = date('Y-m-d H:i:s'); // Get the current date and time in the 
 
 // Insert data into the database
 
-require('../app/dbQuery.php');
 
 
-$database = new DB();
+
+
 $insertquery = "INSERT INTO `users` (`email`,`password_hash`,`password_salt`,`verification_code`,`registered_date`) VALUES 
 (?,?,?,?,?)";
 $prepared = $database->prepare($insertquery,'sssss',array($email,$hash,$salt,$verification_code,$currentDateTime));
