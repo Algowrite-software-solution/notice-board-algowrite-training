@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 // Handle the request accordingly
 
 $user_details = $_POST["signUpData"];
@@ -62,6 +62,13 @@ $database = new DB();
 $insertquery = "INSERT INTO `users` (`email`,`password_hash`,`password_salt`,`verification_code`,`registered_date`) VALUES 
 (?,?,?,?,?)";
 $prepared = $database->prepare($insertquery,'sssss',array($email,$hash,$salt,$verification_code,$currentDateTime));
+
+$rs="SELECT * FROM `users` WHERE `email`= ?";
+$prepared2 = $database->prepare($rs,'s',array($email));
+$data = $prepared2->get_result();
+$user_data = $data->fetch_assoc();
+
+$_SESSION["nb_user"] = $user_data;
 
 $response_object->status="success";
 ErrorSender::sendError($response_object);
