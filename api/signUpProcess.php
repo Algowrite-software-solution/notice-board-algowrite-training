@@ -32,6 +32,15 @@ foreach ($errors as $key => $value) {
     }
 }
 
+$rs="SELECT * FROM `users` WHERE `email`= ?";
+$prepared2 = $database->prepare($rs,'s',array($email));
+$data = $prepared2->get_result();
+
+if($data->num_rows != 0){
+    $response_object->error="user alredy exits with same email";
+    ErrorSender::sendError($response_object);
+}
+
 if($password!=$retypepassword){
     echo("passwords are not matching");
     die();
