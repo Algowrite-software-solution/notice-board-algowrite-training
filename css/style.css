@@ -1,0 +1,10 @@
+.box{
+    border-radius: 30px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.961),rgba(182, 53, 247, 0.806));
+    background-color: #5d36cb;background-image: linear-gradient(140deg,#ffffff 50%,#d95cb1 20%);
+    box-shadow: 1px 1px 20px 1px rgb(13, 12, 12);
+}
+
+.box:hover{
+    box-shadow: 1px 1px 25px 5px rgb(13, 12, 12);
+}
