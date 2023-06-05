@@ -38,18 +38,18 @@
 
                     <div class="col-6 offset-3 text-center mt-5">
                         <label class="fw-bold ">Email</label>
-                        <input type="text" placeholder="Enter Email" class="form-control col-12">
+                        <input type="text" id="EMAIL" placeholder="Enter Email" class="form-control col-12">
                     </div>
 
                     <div class="col-12 mt-5">
                         <div class="row">
                             <div class="col-5">
                                 <label class="fw-bold">Password </label>
-                                <input type="text" placeholder="Password" class="form-control d-grid col-12" required>
+                                <input id="PW" type="text" placeholder="Password" class="form-control d-grid col-12" required>
                             </div>
                             <div class="col-5 offset-2">
                                 <label class="fw-bold">Confirm Password</label>
-                                <input type="text" placeholder="Confirm Password" class="form-control col-12" required>
+                                <input type="text" id="CPW" placeholder="Confirm Password" class="form-control col-12" required>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                 <button class="btn btn-success">Sign In</button>
                             </div>
                             <div class="col-5  d-grid offset-2">
-                                <button class=" btn btn-primary">Sign Up</button>
+                                <button class=" btn btn-primary" onclick="signup();">Sign Up</button>
                             </div>
                         </div>
                     </div>
