@@ -12,8 +12,9 @@ class DB
     {
         $host = 'localhost';
         $user = 'root';
-        $password = 'JanithNirmal12#$'; //  janith
-        $database = ''; 
+        // $password = 'JanithNirmal12#$'; //  janith
+        $password = "Assiment@1234ABC";
+        $database = 'notice-board-algowrite'; 
 
 
         $this->host = $host;
