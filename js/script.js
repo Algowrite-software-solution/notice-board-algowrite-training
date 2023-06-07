@@ -1,7 +1,7 @@
 function signup() {
-    let email = document.getElementById("EMAIL").value;
-    let password = document.getElementById("PW").value;
-    let confirmpassword = document.getElementById("CPW").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("passowrd").value;
+    let confirmpassword = document.getElementById("rePassword").value;
   
     let dataObject = {
       email: email,
@@ -12,7 +12,7 @@ function signup() {
     let jsonData = JSON.stringify(dataObject);
   
     let form = new FormData();
-    form.append("jsonobj", jsonData);
+    form.append("SignUpdata", jsonData);
   
     let rq = new XMLHttpRequest();
   
