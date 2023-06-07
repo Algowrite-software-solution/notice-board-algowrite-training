@@ -19,7 +19,7 @@
                     <div class="col-8 p-5 rounded" style="background-color:gray;">
                       <div class="row d-flex align-items-center justify-content-center">
                         <div class="col-9">
-                            <h3 class="text-center fw-bold">Sign Up </h3>
+                            <h3 class="text-center fw-bold">Administor Sign Up </h3>
                             <div class="mt-4 pb-4"><input class="form-control" type="email" placeholder="email" id="email"/></div>
                             <div class="pb-4"><input class="form-control" type="password" placeholder="passowrd" id="password"/></div>
                             <div class="pb-4"><input class="form-control" type="password" placeholder="confirm-password" id="rePassword"/></div>
