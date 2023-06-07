@@ -6,7 +6,7 @@ function signup() {
     let dataObject = {
       email: email,
       password: password,
-      confirmpassword: confirmpassword
+      retypepassword: confirmpassword
     };
   
     let jsonData = JSON.stringify(dataObject);
